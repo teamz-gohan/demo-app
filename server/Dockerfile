@@ -1,8 +1,5 @@
 FROM node:20-alpine
 
-ENV MONGO_URL=mongodb://admin:password@mongodb \
-    ACCESS_TOKEN_SECRET=830d157dfcf0e52b1f2d2d5a3f7e4a8eec6cba07552c300d04ba3586c25d7d2800b361aca9dfa73365ba81a8f61eb1251050c96f15c1b8eb387a2bdfb1aeaa33
-
 WORKDIR /home/server
 
 COPY . .

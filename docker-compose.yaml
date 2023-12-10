@@ -1,11 +1,14 @@
 version: '3'
 services:
   server:
-    image: 351848909991.dkr.ecr.ap-southeast-2.amazonaws.com/my-app-server:1.0
+    image: my-app-server:1.0
     ports:
       - 5000:5000
+    environment:
+      - MONGO_URL=${MONGO_URL}
+      - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
   client:
-    image: 351848909991.dkr.ecr.ap-southeast-2.amazonaws.com/my-app-client:1.0
+    image: my-app-client:1.0
     ports:
       - 3000:3000
   mongodb:
