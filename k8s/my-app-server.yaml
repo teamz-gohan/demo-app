@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: 351848909991.dkr.ecr.ap-southeast-2.amazonaws.com/my-app-server:1.0
+          image: server:1.0
           ports:
             - containerPort: 5000
           env:
@@ -28,7 +28,7 @@ spec:
             - name: USER_PWD
               valueFrom:
                 secretKeyRef:
-                  name: mono-secret
+                  name: mongo-secret
                   key: mongo-password
             - name: DB_URL
               valueFrom:

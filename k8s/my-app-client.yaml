@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: 351848909991.dkr.ecr.ap-southeast-2.amazonaws.com/my-app-client:1.0
+          image: client:1.0
           ports:
             - containerPort: 3000
 ---
