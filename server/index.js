@@ -6,9 +6,13 @@ const cors = require('cors')
 const authRouter = require('./routes/auth')
 const postRouter = require('./routes/post')
 
+var k8s = true
+
 const connectDB = async () => {
 	try {
 		await mongoose.connect(
+			k8s? 
+			`mongodb://${process.env.USER_NAME}:${process.env.USER_PWD}@${process.env.DB_URL}`:
 			`${process.env.MONGO_URL}`,
 			{
 				
