@@ -20,12 +20,12 @@ spec:
           ports:
             - containerPort: 5000
           env:
-            - name: MONGO_USER
+            - name: USER_NAME
               valueFrom:
                 secretKeyRef:
                   name: mongo-secret
                   key: mongo-user
-            - name: MONGO_PASSWORD
+            - name: USER_PWD
               valueFrom:
                 secretKeyRef:
                   name: mono-secret
