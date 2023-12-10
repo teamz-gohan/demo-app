@@ -19,6 +19,12 @@ spec:
           image: client:1.0
           ports:
             - containerPort: 3000
+          env:
+            - name: SERVER_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: server-config
+                  key: server-url
 ---
 apiVersion: v1
 kind: Service
