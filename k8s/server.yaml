@@ -17,7 +17,6 @@ spec:
       containers:
         - name: server
           image: gohanbeast/server:1.0
-          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           env:
