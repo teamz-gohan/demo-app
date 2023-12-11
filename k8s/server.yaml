@@ -5,7 +5,7 @@ metadata:
   labels:
     app: server
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: server
@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: server
-          image: server:1.0
+          image: gohanbeast/server:1.0
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           env:
